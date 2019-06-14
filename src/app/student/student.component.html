@@ -1,0 +1,10 @@
+<div class="lContainer">
+    <h1>Student Portal</h1>
+    
+    <h3>Log In or Register</h3>
+    
+    <button class="logbutton" *ngIf="!sLogIn && !sRegister" (click)="selectLoginOption(0)" >Log In</button><br>
+    
+    <button class="logbutton" *ngIf="!sLogIn && !sRegister" (click)="selectLoginOption(1)"> Register</button><br>
+    <button (click)="reset()" class="logbutton">Back</button>
+    </div>
