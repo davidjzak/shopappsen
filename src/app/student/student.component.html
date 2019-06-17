@@ -1,10 +1,153 @@
 <div class="lContainer">
-    <h1>Student Portal</h1>
-    
-    <h3>Log In or Register</h3>
-    
-    <button class="logbutton" *ngIf="!sLogIn && !sRegister" (click)="selectLoginOption(0)" >Log In</button><br>
-    
-    <button class="logbutton" *ngIf="!sLogIn && !sRegister" (click)="selectLoginOption(1)"> Register</button><br>
-    <button (click)="reset()" class="logbutton">Back</button>
+  <h1>Student Portal</h1>
+
+  <h3>Log In or Register</h3>
+  <div class="formcontainer">
+    <button class="logbutton" *ngIf="!sLogIn && !sRegister" (click)="selectLoginOption(0)">Log In</button><br>
+    <div *ngIf="sLogIn">
+      <mat-form-field *ngIf="sLogIn">
+        <input appearance="standard" matInput placeholder="Username" formControlName="Username" />
+        <mat-error>
+        </mat-error>
+
+      </mat-form-field>
+      <br>
+      <mat-form-field *ngIf="sLogIn">
+        <input appearance="standard" matInput placeholder="Password" formControlName="PasswordStudent"
+          type="password" />
+        <mat-error>
+        </mat-error>
+
+      </mat-form-field><br>
+
+      <button class="proceed"> Login </button>
     </div>
+
+    <button class="logbutton" *ngIf="!sLogIn && !sRegister" (click)="selectLoginOption(1)"> Register</button><br>
+    <div *ngIf="sRegister">
+      <mat-form-field *ngIf="sRegister">
+        <input appearance="standard" matInput placeholder="Title" formControlName="sTitle" />
+        <mat-error>
+        </mat-error>
+
+      </mat-form-field>
+
+      <mat-form-field *ngIf="sRegister">
+        <input appearance="standard" matInput placeholder="Date of Birth" formControlName="sDOB" />
+        <mat-error>
+        </mat-error>
+
+      </mat-form-field>
+
+      <mat-form-field>
+        <input appearance="standard" matInput placeholder="Gender" formControlName="sGender" />
+        <mat-error>
+        </mat-error>
+
+      </mat-form-field>
+      <br>
+      <mat-form-field>
+        <input appearance="standard" matInput placeholder="Given Name *" formControlName="sGivenName" />
+        <mat-error>
+        </mat-error>
+
+      </mat-form-field>
+
+      <mat-form-field>
+        <input appearance="standard" matInput placeholder="Middle Name" formControlName="sMiddleName" />
+        <mat-error>
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input appearance="standard" matInput placeholder="Last Name *" formControlName="sLastName" />
+        <mat-error>
+        </mat-error>
+
+      </mat-form-field>
+
+
+      <mat-form-field>
+        <input appearance="standard" matInput placeholder="Address Line 1 *" formControlName="sAddress1" />
+        <mat-error>
+        </mat-error>
+
+      </mat-form-field>
+
+      <mat-form-field>
+        <input appearance="standard" matInput placeholder="Address Line 2" formControlName="sAddress2" />
+        <mat-error>
+        </mat-error>
+
+      </mat-form-field>
+
+
+      <mat-form-field>
+        <input appearance="standard" matInput placeholder="Postal Code" formControlName="sPostalCode" />
+        <mat-error>
+        </mat-error>
+
+      </mat-form-field>
+
+      <mat-form-field>
+        <input appearance="standard" matInput placeholder="City" formControlName="sCity" />
+        <mat-error>
+        </mat-error>
+
+      </mat-form-field>
+
+
+      <mat-form-field>
+        <input appearance="standard" matInput placeholder="OEN Number" formControlName="sOEN" />
+        <mat-error>
+        </mat-error>
+
+      </mat-form-field>
+
+
+      <mat-form-field>
+        <input appearance="standard" matInput placeholder="Country" formControlName="sCountry" />
+        <mat-error>
+        </mat-error>
+
+      </mat-form-field>
+
+
+      <mat-form-field>
+        <input appearance="standard" matInput placeholder="Province" formControlName="sProvince" />
+        <mat-error>
+        </mat-error>
+
+      </mat-form-field>
+
+
+      <mat-form-field>
+        <input appearance="standard" matInput placeholder="Home Phone(###-###-####)*" formControlName="sHomePhone" />
+        <mat-error>
+        </mat-error>
+
+      </mat-form-field>
+
+
+      <mat-form-field>
+        <input appearance="standard" matInput placeholder="Daytime Phone(###-###-####)"
+          formControlName="sDayTimePhone" />
+        <mat-error>
+        </mat-error>
+
+      </mat-form-field>
+
+
+      <mat-form-field>
+        <input appearance="standard" matInput placeholder="Cell Phone(###-###-####)*" formControlName="sCellPhone" />
+        <mat-error>
+        </mat-error>
+
+      </mat-form-field>
+      <br>
+
+      <button class="proceed"> Register </button>
+    </div>
+    <button (click)="reset()" class="logbutton">Back</button>
+  </div>
+</div>

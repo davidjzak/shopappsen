@@ -7,6 +7,9 @@ import { LoginComponent } from './login/login.component';
 import { StudentloginComponent } from './student/studentlogin/studentlogin.component';
 import { StudentRegisterComponent } from './student/studentRegister/studentRegister.component';
 import { StudentComponent } from './student/student.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 @NgModule({
   declarations: [
@@ -19,7 +22,11 @@ import { StudentComponent } from './student/student.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatInputModule,
+    MatFormFieldModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
