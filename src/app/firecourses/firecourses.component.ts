@@ -16,7 +16,7 @@ export class FirecoursesComponent implements OnInit {
    }
 
 
-   displayedColumns: string[] = ['courseId', 'name'];
+   displayedColumns: string[] = ['courseId', 'name', 'register'];
    dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
  
    @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;

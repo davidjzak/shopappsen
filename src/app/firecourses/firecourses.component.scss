@@ -13,3 +13,19 @@ table {
     width: 100%;
   }
   
+  .logbutton {
+    margin: 5px;
+    background-color: red;
+    width: 200px;
+    height: 33px;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    border: 2px solid #888;
+}
+
+.logbutton:active, .logbutton:hover {
+
+background-color: #FF8784;
+color: white;
+}
