@@ -29,9 +29,6 @@ export class FirecoursesComponent implements OnInit {
   
 
 
-
-
-
   
 }
 

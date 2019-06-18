@@ -14,7 +14,7 @@ export class LoginComponent implements OnInit {
   }
 
   navigateToFire = () => {
-    this.router.navigateByUrl('/fire')
+    this.router.navigateByUrl('/student')
   }
 
 }

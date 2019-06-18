@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
 
 
 @Component({
@@ -8,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StudentComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
@@ -34,5 +36,8 @@ reset(){
   this.sRegister = false;
 }
 
+navigateToFire = () => {
+  this.router.navigateByUrl('/fire')
+}
 
 }
