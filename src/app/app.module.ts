@@ -10,6 +10,10 @@ import { StudentComponent } from './student/student.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import {Component, OnInit, ViewChild} from '@angular/core';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatTableModule} from '@angular/material/table';
+
 
 @NgModule({
   declarations: [
@@ -18,14 +22,18 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     LoginComponent,
     StudentloginComponent,
     StudentRegisterComponent,
-    StudentComponent
+    StudentComponent,
+    
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatInputModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatPaginatorModule,
+   MatTableModule
 
   ],
   providers: [],
