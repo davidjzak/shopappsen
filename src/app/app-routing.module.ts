@@ -4,6 +4,7 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { FirecoursesComponent } from './firecourses/firecourses.component';
 import { StudentComponent } from './student/student.component';
+import { TeacherdashComponent } from './teacherdash/teacherdash.component'
 
 const routes: Routes = [
   {
@@ -21,6 +22,10 @@ redirectTo: '/login'  },
   {
     path: 'student',
     component: StudentComponent
+  },
+  {
+    path: 'teacherdash',
+    component: TeacherdashComponent
   }
 ];
 

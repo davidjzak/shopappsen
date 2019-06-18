@@ -13,6 +13,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import {Component, OnInit, ViewChild} from '@angular/core';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatTableModule} from '@angular/material/table';
+import { TeacherdashComponent } from './teacherdash/teacherdash.component';
 
 
 @NgModule({
@@ -23,6 +24,7 @@ import {MatTableModule} from '@angular/material/table';
     StudentloginComponent,
     StudentRegisterComponent,
     StudentComponent,
+    TeacherdashComponent,
     
 
   ],
