@@ -1,6 +1,4 @@
-const keyVaultSearch = require('../common/getVaultValue.js');
-const keyVaultName = process.env.VAULT_NAME || 'IAP-SBX-KeyVault';
-var iwa_constants = require('../common/iwa-constants');
+
 
 const sql = require('mssql');
 
@@ -15,11 +13,12 @@ const sql = require('mssql');
 //   };
 
 const config = {
-    user: "DZ\\David",
-    password: '',
-    server: 'DZ\\SQLEXPRESS',
-    database: 'fireCourses',
-    encrypt: false
+  server: 'localhost',
+  database: 'fireCourses',
+  user: 'DZ',
+  password: 'password',
+    encrypt: false,
+    port:1433
 };
 
 //config = iwa_constants.getDbConfig();
@@ -45,6 +44,7 @@ module.exports = {
   selectData: async function(selectQuery) {
     return new Promise(async function(resolve, reject) {
       const pool = await poolPromise;
+      console.log(pool)
       // create Request object
       let request = pool.request();
       // request query using promise
@@ -87,6 +87,7 @@ module.exports = {
           resolve(result.recordset);
         })
         .catch(err => {
+          console.log(err)
           reject({
             message: 'Unable to run the select query',
             err

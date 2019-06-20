@@ -2,6 +2,8 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const service = require('./DefaultService.js');
+const test = require('./test')
+const sendb = require('./sendb')
 //const morgan = require('morgan');
 /* this module is used to run the web server locally using localhost alongside the front-end
   TODO: remove in prod
@@ -34,15 +36,18 @@ function initialize() {
   TODO: remove in prod
 */
     app.use(cors()); //TODO: remove in prod
-    const authRouter = require('../iwa_api/middleware/auth-router');
-    app.use(authRouter);
-    const authRouterAgent = require('../iwa_api/middleware/auth-router-agent');
-    app.use(authRouterAgent);
+
     app.get('/', (req, res) => {
       //var urlparts = req.url.split("/");
       //var ProgCode = urlparts[2].split(".")[0];
       res.end('IWA Service APIs ');
     });
+
+    app.get('/test', (req, res) => {
+      const selectQuery = `
+      select * from fireCourses.db.courseTable      `;
+       sendb.selectDataWithParams(selectQuery, []).then(data => res.send(data))
+    })
 
 
 

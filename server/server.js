@@ -7,8 +7,6 @@ if (process.env.NODE_ENV !== 'production') {
     require('dotenv').config();
   }
 
-  
-//var iwa_constants = require('./iwa_api/common/iwa-constants'); - same as key names
 
 const keyNames = [
     'CS-IBUSER',
@@ -33,7 +31,7 @@ const keyNames = [
   async function startup() {
     try {
       console.log('Initializing web server module');
-      const webServer = require('./service/web-server.js');
+      const webServer = require('./web-server.js');
       await webServer.initialize();
     } catch (err) {
       console.error(err);
@@ -43,9 +41,6 @@ const keyNames = [
   }
 
 
-  iwa_constants.initializeConstants().then(result => {
-    startup();
-  });
   //startup()
   
   async function shutdown(e) {
@@ -80,4 +75,7 @@ const keyNames = [
   
     shutdown(err);
   });
+
+  startup();
+
   
