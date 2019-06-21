@@ -14,6 +14,7 @@ import {Component, OnInit, ViewChild} from '@angular/core';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatTableModule} from '@angular/material/table';
 import { TeacherdashComponent } from './teacherdash/teacherdash.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -30,6 +31,7 @@ import { TeacherdashComponent } from './teacherdash/teacherdash.component';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatInputModule,

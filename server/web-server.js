@@ -46,7 +46,9 @@ function initialize() {
     app.get('/test', (req, res) => {
       const selectQuery = `
       select * from fireCourses.db.courseTable      `;
-       sendb.selectDataWithParams(selectQuery, []).then(data => res.send(data))
+       sendb.selectDataWithParams(selectQuery, []).then(data => {res.send(data);
+       let x = data; console.log(x[1].courseName);}
+       )
     })
 
 
