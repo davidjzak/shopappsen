@@ -3,17 +3,18 @@
 
   <h3>Log In or Register</h3>
   <div class="formcontainer">
+    <div [formGroup]='loginForm'>
     <button class="logbutton" *ngIf="!sLogIn && !sRegister" (click)="selectLoginOption(0)">Log In</button><br>
     <div *ngIf="sLogIn">
       <mat-form-field *ngIf="sLogIn">
-        <input appearance="standard" matInput placeholder="Username" formControlName="Username" />
+        <input appearance="standard" matInput placeholder="Username" formControlName="sUsername" />
         <mat-error>
         </mat-error>
 
       </mat-form-field>
       <br>
       <mat-form-field *ngIf="sLogIn">
-        <input appearance="standard" matInput placeholder="Password" formControlName="PasswordStudent"
+        <input appearance="standard" matInput placeholder="Password" formControlName="sPassword"
           type="password" />
         <mat-error>
         </mat-error>
@@ -22,6 +23,7 @@
 
       <button class="proceed"> Login </button>
     </div>
+  </div>
 
     <button class="logbutton" *ngIf="!sLogIn && !sRegister" (click)="selectLoginOption(1)"> Register</button><br>
     <div *ngIf="sRegister">

@@ -15,6 +15,9 @@ import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatTableModule} from '@angular/material/table';
 import { TeacherdashComponent } from './teacherdash/teacherdash.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FormBuilder, FormGroup } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule }   from '@angular/forms';
 
 
 @NgModule({
@@ -26,6 +29,7 @@ import { HttpClientModule } from '@angular/common/http';
     StudentRegisterComponent,
     StudentComponent,
     TeacherdashComponent,
+
     
 
   ],
@@ -37,7 +41,10 @@ import { HttpClientModule } from '@angular/common/http';
     MatInputModule,
     MatFormFieldModule,
     MatPaginatorModule,
-   MatTableModule
+   MatTableModule,
+   ReactiveFormsModule,
+   FormsModule
+   
 
   ],
   providers: [],

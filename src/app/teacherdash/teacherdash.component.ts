@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { FormBuilder, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -10,20 +12,36 @@ import { Observable } from 'rxjs';
 })
 export class TeacherdashComponent implements OnInit {
 
-  constructor(private http: HttpClient) { }
+  coursesobj= null;
+  addCourseForm: FormGroup;
+
+  constructor(private http: HttpClient, private router: Router, private fb: FormBuilder) { }
 
   ngOnInit() {
-    // this.http.get("http://jsonplaceholder.typicode.com/users").
-    //   subscribe((data) => console.log(data));
 
+
+    // form builder
+
+    this.addCourseForm = this.fb.group({
+      tCourseName: '',
+      tDescription: '',
+      tTeacherName: ''
+    })
+
+
+
+    // get data from server
     this.http.get("http://localhost:3000/test").
-      subscribe((data) => {console.log(data);
-
+      subscribe((data) => {
+        console.log(typeof data);
+        this.coursesobj = data;
+        console.log('this.coursesobj', this.coursesobj)
         console.log(Object.keys(data).length);
         for( let i = 0; i < Object.keys(data).length; i++){
           console.log(data[i].courseName)
 
           this.courses.push(data[i].courseName);
+          this.coursesobj.push()
         }
       
       
@@ -32,6 +50,8 @@ export class TeacherdashComponent implements OnInit {
   }
 
   courses = ['Fire Training', 'Rescue Techniques', 'Rescue Carries'];
+
+  //coursesobj = [];
 
 
 

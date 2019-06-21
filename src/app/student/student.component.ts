@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 
 
@@ -10,10 +11,27 @@ import { Router } from '@angular/router';
 })
 export class StudentComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  loginForm: FormGroup;
+
+  constructor(private router: Router, private fb: FormBuilder) { 
+
+
+  }
 
   ngOnInit() {
+    this.loginForm = this.fb.group({
+      sUsername: ['', [Validators.required]],
+      sPassword: ['', Validators.required]
+    })
+    this.loginForm.valueChanges.subscribe(form => {
+
+      console.log(form)
+    })
+    this.loginForm.get('sUsername');
+    this.loginForm.controls['sPassword'];
   }
+
+
 
  sLogIn: boolean = false;
  sRegister: boolean = false;

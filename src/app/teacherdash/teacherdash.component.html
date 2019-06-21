@@ -3,7 +3,7 @@
    
   <button class="logbutton" (click)="addCourse();">Add A Course</button>
 
-  <div class="formContainer">
+  <div class="formContainer" [formGroup]="addCourseForm">
 <h2> Enter New Course Details</h2>
     
       <mat-form-field>
@@ -39,8 +39,8 @@
 <h2>Courses</h2>
 
 <ul>
-  <li *ngFor="let course of courses">
-    {{ course }}
+  <li *ngFor="let course of coursesobj">
+    {{ course.courseName }} {{ course.courseId}}
   </li>
 </ul>
   </div>

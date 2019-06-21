@@ -52,6 +52,17 @@ function initialize() {
     })
 
 
+    parameters = [
+      { name: 'courseName', value: 'testCourse'},
+  
+    ];
+
+    app.get('/sendd', (req, res) => {
+      const body = req.body;
+      const selectQuery = `insert into db.courseTable courseName values(@courseName)`
+      sendb.insertData(selectQuery, parameters ).then(data =>{res.send(data); console.log(data)})
+    });
+
 
     app.listen(port, err => {
       if (err) {
