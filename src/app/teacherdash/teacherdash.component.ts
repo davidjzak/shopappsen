@@ -28,6 +28,9 @@ export class TeacherdashComponent implements OnInit {
       tTeacherName: ''
     })
 
+ 
+
+
 
 
     // get data from server
@@ -57,7 +60,27 @@ export class TeacherdashComponent implements OnInit {
 
   pushCourse(){
     console.log('entered');
-this.courses.push('tree');
+    const test = {value: 'testCourse'};
+    console.log(this.addCourseForm.get('tCourseName').value);
+    console.log(this.addCourseForm.get('tDescription').value);
+    console.log(this.addCourseForm.get('tTeacherName').value);
+    this.http.post('http://localhost:3000/sendd', test).subscribe(res => console.log(res))
+
+    this.http.get("http://localhost:3000/test").
+    subscribe((data) => {
+      console.log(typeof data);
+      this.coursesobj = data;
+      console.log('this.coursesobj', this.coursesobj)
+      console.log(Object.keys(data).length);
+      for( let i = 0; i < Object.keys(data).length; i++){
+        console.log(data[i].courseName)
+
+        this.courses.push(data[i].courseName);
+        this.coursesobj.push()
+      }
+    
+    
+    });
 
   }
 }
