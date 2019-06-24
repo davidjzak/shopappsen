@@ -26,7 +26,7 @@
   </div>
 
     <button class="logbutton" *ngIf="!sLogIn && !sRegister" (click)="selectLoginOption(1)"> Register</button><br>
-    <div *ngIf="sRegister">
+    <div *ngIf="sRegister" [formGroup]='registerForm'>
       <mat-form-field *ngIf="sRegister">
         <input appearance="standard" matInput placeholder="Title" formControlName="sTitle" />
         <mat-error>

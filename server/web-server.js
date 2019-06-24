@@ -59,7 +59,7 @@ function initialize() {
 
     app.get('/sendd', (req, res) => {
       const body = req.body;
-      const selectQuery = `insert into db.courseTable courseName values(@courseName)`
+      const selectQuery = `insert into fireCourses.db.courseTable (courseName) values(@courseName)`
       sendb.insertData(selectQuery, parameters ).then(data =>{res.send(data); console.log(data)})
     });
 

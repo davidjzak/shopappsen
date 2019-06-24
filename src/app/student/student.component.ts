@@ -12,6 +12,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class StudentComponent implements OnInit {
 
   loginForm: FormGroup;
+  registerForm: FormGroup;
 
   constructor(private router: Router, private fb: FormBuilder) { 
 
@@ -23,13 +24,37 @@ export class StudentComponent implements OnInit {
       sUsername: ['', [Validators.required]],
       sPassword: ['', Validators.required]
     })
-    this.loginForm.valueChanges.subscribe(form => {
 
-      console.log(form)
+
+    this.registerForm = this.fb.group({
+      sTitle: ['', [Validators.required]],
+      sDOB: ['', Validators.required],
+      sGender:[''],
+      sGivenName:[''],
+      sMiddleName:[''],
+      sLastName:[''],
+      sAddress1:[''],
+      sAddress2:[''],
+      sPostalCode:[''],
+      sCity:[''],
+      sOEN:[''],
+      sCountry:[''],
+      sProvince:[''],
+      sHomePhone:[''],
+      sDayTimePhone:[''],
+      sCellPhone:['']
     })
-    this.loginForm.get('sUsername');
-    this.loginForm.controls['sPassword'];
-  }
+
+
+
+
+  //   this.loginForm.valueChanges.subscribe(form => {
+
+  //     console.log(form)
+  //   })
+  //   this.loginForm.get('sUsername');
+  //   this.loginForm.controls['sPassword'];
+   }
 
 
 
