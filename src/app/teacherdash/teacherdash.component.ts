@@ -60,12 +60,14 @@ export class TeacherdashComponent implements OnInit {
 
   pushCourse(){
     console.log('entered');
-    const test = {value: 'testCourse'};
-    console.log(this.addCourseForm.get('tCourseName').value);
-    console.log(this.addCourseForm.get('tDescription').value);
-    console.log(this.addCourseForm.get('tTeacherName').value);
-    this.http.post('http://localhost:3000/sendd', test).subscribe(res => console.log(res))
 
+   let courseName = this.addCourseForm.get('tCourseName').value;
+    let desc = this.addCourseForm.get('tDescription').value;
+   let teacherName = this.addCourseForm.get('tTeacherName').value;
+   const test = [{value: courseName }, {value: desc}, {value: teacherName}];
+   console.log('test values')
+    this.http.post('http://localhost:3000/sendd', test).subscribe(res => {console.log(res)
+    
     this.http.get("http://localhost:3000/test").
     subscribe((data) => {
       console.log(typeof data);
@@ -81,6 +83,7 @@ export class TeacherdashComponent implements OnInit {
     
     
     });
-
+  }
+    )
   }
 }

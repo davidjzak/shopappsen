@@ -55,12 +55,16 @@ function initialize() {
    
 
     app.post('/sendd', (req, res) => {
-      console.log(req.body)
+      console.log('here', req.body[0].value)
+      
+      
       parameters = [
-        { name: 'courseName', value: req.body.value},
+        { name: 'courseName', value: req.body[0].value},
+        {name: 'courseDesc', value: req.body[1].value},
+        {name:'coursetype', value: req.body[2].value}
     
       ];
-      const selectQuery = `insert into fireCourses.db.courseTable (courseName) values(@courseName)`
+      const selectQuery = `insert into fireCourses.db.courseTable (courseName, courseDesc, coursetype ) values(@courseName, @courseDesc, @coursetype)`
       sendb.insertData(selectQuery, parameters ).then(data =>{res.send(data); console.log(data)})
     });
 
