@@ -3,7 +3,7 @@
 <th> Course Name</th>
 
 </table> -->
-
+<h1> Select Your Courses</h1>
 
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
@@ -24,7 +24,7 @@
 
     <ng-container matColumnDef="register">
       <th mat-header-cell *matHeaderCellDef>  </th>
-      <td mat-cell *matCellDef="let element"> <button class="logbutton">Register</button> </td>
+      <td mat-cell *matCellDef="let element"> <button class="logbutton" (click)="navigateToStudent()">Register</button> </td>
     </ng-container>
   
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>

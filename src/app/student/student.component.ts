@@ -79,7 +79,10 @@ reset(){
   this.sRegister = false;
 }
 
-navigateToFire = () => {
+
+
+
+navigateToCourses = () => {
   this.router.navigateByUrl('/fire')
 }
 

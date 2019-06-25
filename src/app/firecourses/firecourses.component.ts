@@ -3,6 +3,7 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
 import {MatPaginator} from '@angular/material/paginator';
 import {MatTableDataSource} from '@angular/material/table';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-firecourses',
@@ -11,7 +12,7 @@ import {MatTableDataSource} from '@angular/material/table';
 })
 export class FirecoursesComponent implements OnInit {
 
-  constructor() {
+  constructor(private router: Router) {
     console.log('const')
    }
 
@@ -21,7 +22,9 @@ export class FirecoursesComponent implements OnInit {
  
    @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
 
-
+   navigateToStudent = () => {
+    this.router.navigateByUrl('/student')
+  }
 
   ngOnInit() {
   }

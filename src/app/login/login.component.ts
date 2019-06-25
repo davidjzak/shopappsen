@@ -13,8 +13,13 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
   }
 
-  navigateToFire = () => {
-    this.router.navigateByUrl('/student')
+  navigateToCourses = () => {
+    this.router.navigateByUrl('/fire')
+  }
+
+
+  navigateToTeacher = () => {
+    this.router.navigateByUrl('/teacherdash')
   }
 
 }

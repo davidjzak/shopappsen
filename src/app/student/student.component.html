@@ -1,7 +1,7 @@
 <div class="lContainer">
-  <h1>Student Portal</h1>
+  <h1>Proceed to Checkout</h1>
 
-  <h3>Log In or Register</h3>
+  <h3>Log In or Register to Proceed to Checkout</h3>
   <div class="formcontainer">
     <div [formGroup]='loginForm'>
     <button class="logbutton" *ngIf="!sLogIn && !sRegister" (click)="selectLoginOption(0)">Log In</button><br>
@@ -150,6 +150,7 @@
 
       <button class="proceed" (click)="navigateToFire()"> Register </button>
     </div>
-    <button (click)="reset()" class="logbutton">Back</button>
+    <button (click)="reset()" class="logbutton"  *ngIf="sLogIn || sRegister">Back</button>
+    <button (click)="navigateToCourses()" class="logbutton"  *ngIf="!sLogIn && !sRegister">Back to Course Selection</button>
   </div>
 </div>
