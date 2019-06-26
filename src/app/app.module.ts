@@ -13,13 +13,15 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import {Component, OnInit, ViewChild} from '@angular/core';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatTableModule} from '@angular/material/table';
-import { TeacherdashComponent } from './teacherdash/teacherdash.component';
+import { TeacherdashComponent, DeleteModalDialog } from './teacherdash/teacherdash.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule }   from '@angular/forms';
 import { TeacherloginComponent } from './teacherlogin/teacherlogin.component';
 import {Globals} from '../globals';
+import {MatDialogModule} from '@angular/material/dialog';
+
 
 @NgModule({
   declarations: [
@@ -31,6 +33,7 @@ import {Globals} from '../globals';
     StudentComponent,
     TeacherdashComponent,
     TeacherloginComponent,
+    DeleteModalDialog
 
     
 
@@ -45,10 +48,12 @@ import {Globals} from '../globals';
     MatPaginatorModule,
    MatTableModule,
    ReactiveFormsModule,
-   FormsModule
+   FormsModule,
+   MatDialogModule
    
 
   ],
+  entryComponents: [DeleteModalDialog],
   providers: [ Globals],
   bootstrap: [AppComponent]
 })

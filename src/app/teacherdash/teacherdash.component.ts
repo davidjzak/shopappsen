@@ -1,10 +1,11 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild, Inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import {MatPaginator} from '@angular/material/paginator';
 import {MatTableDataSource} from '@angular/material/table';
+import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 
 
 @Component({
@@ -22,7 +23,22 @@ export class TeacherdashComponent implements OnInit {
   dataSource;
   @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
 
-  constructor(private http: HttpClient, private router: Router, private fb: FormBuilder) { }
+  constructor(private http: HttpClient, private router: Router, private fb: FormBuilder, public dialog: MatDialog) { }
+
+  
+  openDialog(element): void {
+    const dialogRef = this.dialog.open(DeleteModalDialog, {
+     
+     // data: {name: this.name, animal: this.animal}
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
+      if(result == true){
+      this.deleteCourse(element);
+      }
+    });
+  }
 
   ngOnInit() {
 
@@ -135,4 +151,21 @@ export interface coursesData {
   courseName: string;
   courseDesc?:string; 
   coursetype?:string;
+}
+
+
+
+@Component({
+  selector: 'delete-modal',
+  templateUrl: 'deletemodal.html',
+  styleUrls: ['./deletemodal.scss']
+})
+export class DeleteModalDialog {
+
+  constructor( public dialogRef: MatDialogRef<DeleteModalDialog>) {} 
+  
+  onNoClick(): void {
+    this.dialogRef.close();
+  }
+
 }
