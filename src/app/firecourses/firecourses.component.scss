@@ -8,10 +8,14 @@
 .courseTable td {
     margin-left: 40px;
 }
+.wrapper {
+    width: 60%;
+    margin: auto;
+}
 
 table {
     width: 100%;
-  }
+}
   
   .logbutton {
     margin: 5px;
@@ -24,6 +28,10 @@ table {
     border: 2px solid #888;
 }
 
+.register {
+    width: 50px;
+    float: left;
+}
 .logbutton:active, .logbutton:hover {
 
 background-color: #FF8784;

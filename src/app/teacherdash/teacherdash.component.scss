@@ -1,6 +1,6 @@
 .lContainer {
     margin: auto;
-    width: 50vw;
+    width: 70vw;
     background-color: red;
     text-align: center;
     border-radius: 6px;
@@ -37,4 +37,23 @@ color: black;
   
 .mat-form-field{
     margin-left: 25px;
+}
+
+table {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.tablecontainer{
+    background-color: white;
+    width: 90%;
+    margin:auto;
+    padding-top:4px; 
+    border-radius: 5px;
+    overflow: hidden;
+    
+}
+
+td {
+    text-align:left;
 }

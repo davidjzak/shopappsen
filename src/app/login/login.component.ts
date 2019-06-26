@@ -19,7 +19,7 @@ export class LoginComponent implements OnInit {
 
 
   navigateToTeacher = () => {
-    this.router.navigateByUrl('/teacherdash')
+    this.router.navigateByUrl('/tlogin')
   }
 
 }

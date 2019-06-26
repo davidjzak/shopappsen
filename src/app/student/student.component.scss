@@ -76,3 +76,26 @@ color: black;
 .mat-form-field{
      margin-left: 25px;
 }
+
+.orderSummary {
+    border: 2px solid red;
+    max-width: 400px;
+    margin: 30px;
+    padding: 13px;
+    
+}
+
+.fContainer {
+    display: flex;
+    flex-direction: row;
+}
+
+.orderSummary p span {
+    font-weight: bold;
+    color: black;
+}
+
+
+.orderSummary p{
+    color: #222;
+}

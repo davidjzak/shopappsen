@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import {Globals} from '../../globals'
 
 
 
@@ -13,8 +14,11 @@ export class StudentComponent implements OnInit {
 
   loginForm: FormGroup;
   registerForm: FormGroup;
+  selectedCourse: string;
+  selectedCourseDesc: string;
+  selectedCourseId: number;
 
-  constructor(private router: Router, private fb: FormBuilder) { 
+  constructor(private globals: Globals, private router: Router, private fb: FormBuilder) { 
 
 
   }
@@ -54,6 +58,11 @@ export class StudentComponent implements OnInit {
   //   })
   //   this.loginForm.get('sUsername');
   //   this.loginForm.controls['sPassword'];
+
+
+   this.selectedCourse = localStorage.getItem('courseName');
+   this.selectedCourseDesc = localStorage.getItem('courseDesc');
+   this.selectedCourseId = Number(localStorage.getItem('courseId'));
    }
 
 

@@ -1,0 +1,22 @@
+<div class="lContainer">
+    <h1>Teacher Login</h1>
+  
+    <div class="formcontainer" [formGroup]='tloginForm'>
+        <mat-form-field>
+          <input appearance="standard" matInput placeholder="Username" formControlName="tUsername" />
+          <mat-error>
+          </mat-error>
+  
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+          <input appearance="standard" matInput placeholder="Password" formControlName="tPassword"
+            type="password" />
+          <mat-error>
+          </mat-error>
+  
+        </mat-form-field><br>
+  
+        <button class="proceed"  (click)="navigateToTeacher()"> Login </button>
+      </div>
+    </div>

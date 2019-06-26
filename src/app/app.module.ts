@@ -18,7 +18,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule }   from '@angular/forms';
-
+import { TeacherloginComponent } from './teacherlogin/teacherlogin.component';
+import {Globals} from '../globals';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { FormsModule }   from '@angular/forms';
     StudentRegisterComponent,
     StudentComponent,
     TeacherdashComponent,
+    TeacherloginComponent,
 
     
 
@@ -47,7 +49,7 @@ import { FormsModule }   from '@angular/forms';
    
 
   ],
-  providers: [],
+  providers: [ Globals],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

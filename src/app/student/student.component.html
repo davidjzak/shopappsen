@@ -1,3 +1,4 @@
+<div class="fContainer">
 <div class="lContainer">
   <h1>Proceed to Checkout</h1>
 
@@ -153,4 +154,14 @@
     <button (click)="reset()" class="logbutton"  *ngIf="sLogIn || sRegister">Back</button>
     <button (click)="navigateToCourses()" class="logbutton"  *ngIf="!sLogIn && !sRegister">Back to Course Selection</button>
   </div>
+</div>
+
+<div class="orderSummary">
+<h2> Selected Course Cart</h2>
+<p>Selected Course:  <span>{{selectedCourse}}</span></p>
+<p>Desc: <span>{{selectedCourseDesc}} </span></p>
+<p> Id: <span>{{selectedCourseId}} </span></p>
+<p>Price: <span> $99.67 </span></p>
+</div>
+
 </div>

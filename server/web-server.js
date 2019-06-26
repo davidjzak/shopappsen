@@ -55,7 +55,7 @@ function initialize() {
    
 
     app.post('/sendd', (req, res) => {
-      console.log('here', req.body[0].value)
+      console.log('here', req.body)
       
       
       parameters = [
@@ -67,6 +67,22 @@ function initialize() {
       const selectQuery = `insert into fireCourses.db.courseTable (courseName, courseDesc, coursetype ) values(@courseName, @courseDesc, @coursetype)`
       sendb.insertData(selectQuery, parameters ).then(data =>{res.send(data); console.log(data)})
     });
+
+
+    app.post('/deletecourse', (req, res) => {
+
+      console.log('here', req.body[0].value)
+      
+      
+      parameters = [
+        { name: 'courseId', value: req.body[0].value}
+      ];
+      const selectQuery = `delete from fireCourses.db.courseTable where courseId = @courseId`
+      sendb.insertData(selectQuery, parameters ).then(data =>{res.send(data); console.log(data)})
+
+
+    });
+
 
 
     app.listen(port, err => {
