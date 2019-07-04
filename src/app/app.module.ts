@@ -21,9 +21,6 @@ import { FormsModule }   from '@angular/forms';
 import { TeacherloginComponent } from './teacherlogin/teacherlogin.component';
 import {Globals} from '../globals';
 import {MatDialogModule} from '@angular/material/dialog';
-import { AuthComponent } from './auth/auth.component';
-import { GuardComponent } from './auth/guard/guard.component';
-
 
 @NgModule({
   declarations: [
@@ -36,8 +33,7 @@ import { GuardComponent } from './auth/guard/guard.component';
     TeacherdashComponent,
     TeacherloginComponent,
     DeleteModalDialog,
-    AuthComponent,
-    GuardComponent
+   
 
     
 
