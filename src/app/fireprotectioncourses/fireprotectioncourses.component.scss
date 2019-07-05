@@ -1,0 +1,112 @@
+.courseHeader div  {
+    background-color: #000;
+    opacity: 0.8;
+    display: inline-block;
+    width: 536px;
+    height: 212px;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+
+}
+
+.courseHeader{
+    position: relative;
+}
+
+.courseHeader div p {
+    color: white;
+    font-size: 2em;
+    padding-left: 10%;
+    font-family: minion-pro, serif;
+    font-weight: 400;
+    font-style: normal;
+    
+    
+}
+
+
+.courseHeader img {
+
+    max-height: 539px;
+}
+
+.fProtectionMain {
+    background-color:white;
+    width: 80vw;
+    margin:auto;
+}
+
+
+.fProtectionMain h3 {
+    display: inline-block;
+    border-top: 3px solid #DA291C;
+    margin-top: 0px;
+    font-family: minion-pro;
+    padding: 5px 13px 0px 13px;
+    margin-bottom: 0px;
+    font-size: 2.3em;
+}
+
+
+.fProtectionMain hr{
+    margin-bottom: 0px;
+    color: #707070;
+    height: 1px;
+}
+
+.fProtectionMain ul li{
+    list-style-type: none;
+}
+
+.fProtectionMain ul {
+    margin-top: 5px;
+    margin-bottom: 28px;
+}
+
+
+.fProtectionMain .courseDivContainer h2 {
+    display:inline;
+}
+
+.fProtectionMain .courseDivContainer span {
+    float: right;
+    margin-right: 40px;
+    font-weight: bold;
+}
+
+.courseDivContainer{
+    margin-top: 20px;
+}
+
+.mainContainer{
+    font-family: minion-pro, serif;
+}
+
+table {
+    text-align: left;
+    margin: auto;
+    border-spacing:0px;
+}
+
+table td, table th {
+    
+    padding: 20px 30px;
+    border-bottom: 1px solid #707070;
+}
+
+.register {
+    background-color: #DA291C;
+    color: white;
+    width: 138px;
+    height: 40px;
+    border: none;
+}
+
+.full {
+background-color: #888B8D;
+color: white;
+width: 138px;
+height: 40px;
+border: none;
+}

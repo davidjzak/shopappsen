@@ -3,12 +3,12 @@
 
 
 mat-form-field.mat-focused .mat-form-field-ripple {
-    background-color: red !important;
+    background-color: #DA291C !important;
 }
 
 
 .mat-form-field.mat-focused .mat-form-field-label{
-    color: red;
+    color: #DA291C;
 }
 
 
@@ -17,7 +17,7 @@ mat-form-field.mat-focused .mat-form-field-ripple {
 .lContainer {
     margin: auto;
     width: 50vw;
-    background-color: red;
+    background-color: #DA291C;
     text-align: center;
     border-radius: 6px;
 }
@@ -28,7 +28,7 @@ mat-form-field.mat-focused .mat-form-field-ripple {
     width: 200px;
     height: 33px;
     border-radius: 8px;
-    color: red;
+    color: #DA291C;
     font-weight: bold;
     border: 2px solid #888;
 }
@@ -56,7 +56,7 @@ mat-form-field {
 }
 
 .mat-form-field.mat-focused .mat-form-field-label{
-    color: red !important;
+    color: #DA291C !important;
 }
 
 
@@ -66,7 +66,7 @@ mat-form-field {
 
 
 mat-form-field.mat-focused .mat-form-field-ripple {
-    background-color: red !important;
+    background-color: #DA291C !important;
 }
 
 //use for proceeding buttons such as login and register in student component, during fill out step
@@ -79,7 +79,7 @@ mat-form-field.mat-focused .mat-form-field-ripple {
     font-weight: bold;
     border: 2px solid #888;
 width: 200px;
-background-color: red;
+background-color: #DA291C;
 color: white;
 
 }
@@ -99,4 +99,8 @@ color: black;
 
 .xArrowTable:hover {
     cursor: pointer;
+}
+
+body {
+    margin: 0px;
 }
