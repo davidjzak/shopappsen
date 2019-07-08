@@ -7,7 +7,11 @@ import { Router } from '@angular/router';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  constructor() {  }
+  constructor(public router: Router) {  
+    console.log(this.router.url);
+  }
+
+
 }
 
 

@@ -27,8 +27,8 @@
 
 
 .courseHeader img {
-
-    max-height: 539px;
+width: 100%;
+    max-height: 639px;
 }
 
 .fProtectionMain {
@@ -76,7 +76,18 @@
 }
 
 .courseDivContainer{
-    margin-top: 20px;
+
+ 
+    margin: auto;
+    display:inline-block;
+    margin-top: 30px;
+}
+
+.courseDivContainer h2 {
+    margin-left: 60px;
+}
+.courseDivContainer hr {
+    background-color: red; height: 1px; border: 0;
 }
 
 .mainContainer{
@@ -87,6 +98,7 @@ table {
     text-align: left;
     margin: auto;
     border-spacing:0px;
+    width: 80%;
 }
 
 table td, table th {
@@ -95,13 +107,7 @@ table td, table th {
     border-bottom: 1px solid #707070;
 }
 
-.register {
-    background-color: #DA291C;
-    color: white;
-    width: 138px;
-    height: 40px;
-    border: none;
-}
+
 
 .full {
 background-color: #888B8D;
@@ -109,4 +115,9 @@ color: white;
 width: 138px;
 height: 40px;
 border: none;
+}
+
+
+.courseDivContainer table tr td.desc {
+    border: none;
 }

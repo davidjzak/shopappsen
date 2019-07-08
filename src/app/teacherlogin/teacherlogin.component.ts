@@ -17,6 +17,9 @@ export class TeacherloginComponent implements OnInit {
       tUsername: ['', [Validators.required]],
       tPassword: ['', Validators.required]
     })
+
+
+    console.log(this.router.url);
   }
 
 

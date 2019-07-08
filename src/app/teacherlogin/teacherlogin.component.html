@@ -1,9 +1,13 @@
-<div class="lContainer">
-    <h1>Faculty Login</h1>
+
+
+<div class="logContainer">
+
+    <h1>ADMIN LOGIN</h1>
+    <p>Sign in with your Seneca email</p>
   
-    <div class="formcontainer" [formGroup]='tloginForm'>
+    <div [formGroup]='tloginForm'>
         <mat-form-field>
-          <input appearance="standard" matInput placeholder="Username" formControlName="tUsername" />
+          <input appearance="standard" matInput placeholder="someone@example.com" formControlName="tUsername" />
           <mat-error>
           </mat-error>
   
@@ -17,6 +21,7 @@
   
         </mat-form-field><br>
   
-        <button class="proceed"  (click)="navigateToTeacher()"> Login </button>
+        <button class="proceed"  (click)="navigateToTeacher()"> Sign In </button><br><br>
+        <a href="">Trouble Logging in?</a>
       </div>
     </div>
