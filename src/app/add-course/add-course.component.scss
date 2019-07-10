@@ -1,0 +1,63 @@
+h1 {
+    color: #DA291C;
+    display: inline-block;
+
+}
+
+
+.addCourseForm{
+    background-color: white;
+    border-radius:25px;
+ 
+   display:block;
+   width: 55vw;
+   padding: 30px;
+
+   margin-bottom: 50px;
+   margin: auto;
+}
+
+
+.addWrapper {
+    width: 55vw; // same as add course form to keep text aligned
+margin: auto;
+
+}
+
+
+.compBackGround {
+   background-color: #EFEFEF;
+    width: 100%;
+    display:block;
+    overflow: none;
+    height:100vh;
+   // text-align: center;
+}
+
+.formfull.mat-form-field {
+width: 82.2%;
+}
+
+.mat-form-field{
+width: 40%;
+}
+
+.mat-form-field-infix {
+   float: left;
+}
+
+.flexContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+
+.flexContainer h2 {
+    // justify-self: start;
+    margin-right: auto;
+}
+
+aside { // align  buttons with rest of text 
+width: 82.2%; // matches width of wide form fields
+}

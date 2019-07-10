@@ -7,7 +7,7 @@ import { StudentComponent } from './student/student.component';
 import { TeacherdashComponent } from './teacherdash/teacherdash.component'
 import { TeacherloginComponent } from './teacherlogin/teacherlogin.component';
 import { FireprotectioncoursesComponent} from './fireprotectioncourses/fireprotectioncourses.component';
-
+import { AddCourseComponent} from './add-course/add-course.component';
 const routes: Routes = [
   {
     path: '',
@@ -37,6 +37,10 @@ redirectTo: '/login'  },
   {
     path: 'fireprotection',
     component: FireprotectioncoursesComponent
+  },
+  {
+    path: 'addcourse',
+    component: AddCourseComponent
   }
 ];
 

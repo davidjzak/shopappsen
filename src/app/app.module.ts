@@ -22,6 +22,7 @@ import { TeacherloginComponent } from './teacherlogin/teacherlogin.component';
 import {Globals} from '../globals';
 import {MatDialogModule} from '@angular/material/dialog';
 import { FireprotectioncoursesComponent } from './fireprotectioncourses/fireprotectioncourses.component';
+import { AddCourseComponent } from './add-course/add-course.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { FireprotectioncoursesComponent } from './fireprotectioncourses/fireprot
     TeacherloginComponent,
     DeleteModalDialog,
     FireprotectioncoursesComponent,
+    AddCourseComponent,
    
 
     

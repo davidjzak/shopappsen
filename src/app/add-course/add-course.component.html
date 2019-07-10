@@ -1,0 +1,123 @@
+<div class="compBackGround">
+<div class="addWrapper">
+<h1> ADD A COURSE </h1><br>
+<span><b>Note: Save will publish course on website</b></span><br><br>
+<div class="addCourseForm">
+
+    <div class="formContainer" [formGroup]='addCourseForm'>
+        
+            
+                
+
+        <div class="flexContainer">
+            <!-- <h2> Enter New Course Details</h2> -->
+        <mat-form-field class="formfull">
+          <input appearance="standard" matInput placeholder="Faculty" formControlName="tFaculty" />
+          <mat-error>
+          </mat-error>
+  
+        </mat-form-field >
+        <br>
+        <mat-form-field class="formfull">
+          <input appearance="standard" matInput placeholder="Course Name" formControlName="tCourseName"
+            type="password" />
+          <mat-error>
+          </mat-error>
+  
+        </mat-form-field><br>
+
+        <mat-form-field>
+            <input appearance="standard" matInput placeholder="Faculty Employee ID" formControlName="tFEID"
+               />
+            <mat-error>
+            </mat-error>
+          </mat-form-field><br>
+
+          <mat-form-field>
+              <input appearance="standard" matInput placeholder="Course Id" formControlName="tCourseId"
+                 />
+              <mat-error>
+              </mat-error>
+            </mat-form-field><br>
+
+        
+            <mat-form-field>
+                <input appearance="standard" matInput placeholder="Fee" formControlName="tFee"
+                 />
+                <mat-error>
+                </mat-error>
+      
+              </mat-form-field><br>
+              <mat-form-field>
+                  <input appearance="standard" matInput placeholder="Max Seats" formControlName="tMaxSeats"
+                     />
+                  <mat-error>
+                  </mat-error>
+                </mat-form-field><br>
+
+                <mat-form-field>
+                    <input appearance="standard" matInput placeholder="Campus" formControlName="tCampus"
+                       />
+                    <mat-error>
+                    </mat-error>
+                  </mat-form-field><br>
+  
+                  
+                  <mat-form-field>
+                      <input appearance="standard" matInput placeholder="Room" formControlName="tRoom"
+                         />
+                      <mat-error>
+                      </mat-error>
+                    </mat-form-field><br>
+
+                    <mat-form-field>
+                        <input appearance="standard" matInput placeholder="Start Time" formControlName="tStartTime"
+                           />
+                        <mat-error>
+                        </mat-error>
+                      </mat-form-field><br>
+
+                      <mat-form-field>
+                          <input appearance="standard" matInput placeholder="End Time" formControlName="tEndTime"
+                             />
+                          <mat-error>
+                          </mat-error>
+                        </mat-form-field><br>
+                  
+
+                        <mat-form-field>
+                            <input appearance="standard" matInput placeholder="NFPA Certificate #" formControlName="tNFPA"
+                               />
+                            <mat-error>
+                            </mat-error>
+                          </mat-form-field><br>
+                    
+  
+
+                          <mat-form-field>
+                              <input appearance="standard" matInput placeholder="Date of Test" formControlName="tDateTest"
+                                 />
+                              <mat-error>
+                              </mat-error>
+                            </mat-form-field><br>
+                  
+                            <mat-form-field class="formfull">
+                                <input appearance="standard" matInput placeholder="Description (500 characters max)" formControlName="tDesc"
+                                   />
+                                <mat-error>
+                                </mat-error>
+                              </mat-form-field><br>
+<aside>
+                              <button class="buttonred" (click)="pushCourse()" (click)="untoggleAddCourse()">Save</button>
+              <button  class="buttonwhite" (click)=" untoggleAddCourse()"> Cancel </button>
+</aside>
+                            </div>
+             
+        
+          </div>
+
+
+
+
+</div>
+</div>
