@@ -23,6 +23,8 @@ import {Globals} from '../globals';
 import {MatDialogModule} from '@angular/material/dialog';
 import { FireprotectioncoursesComponent } from './fireprotectioncourses/fireprotectioncourses.component';
 import { AddCourseComponent } from './add-course/add-course.component';
+import {  MatDatepickerModule, MatNativeDateModule } from '@angular/material';
+import { ClassDashComponent } from './class-dash/class-dash.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +39,7 @@ import { AddCourseComponent } from './add-course/add-course.component';
     DeleteModalDialog,
     FireprotectioncoursesComponent,
     AddCourseComponent,
+    ClassDashComponent,
    
 
     
@@ -53,8 +56,10 @@ import { AddCourseComponent } from './add-course/add-course.component';
    MatTableModule,
    ReactiveFormsModule,
    FormsModule,
-   MatDialogModule
+   MatDialogModule,
    
+  MatDatepickerModule, 
+  MatNativeDateModule
 
   ],
   entryComponents: [DeleteModalDialog],

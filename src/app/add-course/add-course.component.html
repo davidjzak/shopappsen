@@ -95,15 +95,17 @@
   
 
                           <mat-form-field>
-                              <input appearance="standard" matInput placeholder="Date of Test" formControlName="tDateTest"
-                                 />
+
+                                 <input matInput [min]="minDate" [max]="maxDate" [matDatepicker]="picker" placeholder="Date of Test"   formControlName="tDateTest">
+                                 <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                                 <mat-datepicker #picker></mat-datepicker>
                               <mat-error>
                               </mat-error>
                             </mat-form-field><br>
                   
                             <mat-form-field class="formfull">
-                                <input appearance="standard" matInput placeholder="Description (500 characters max)" formControlName="tDesc"
-                                   />
+                                <textarea appearance="standard" class="aDesc" matInput placeholder="Description (500 characters max)" formControlName="tDesc"
+                                   ></textarea>
                                 <mat-error>
                                 </mat-error>
                               </mat-form-field><br>

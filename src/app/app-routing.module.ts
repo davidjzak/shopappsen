@@ -8,6 +8,7 @@ import { TeacherdashComponent } from './teacherdash/teacherdash.component'
 import { TeacherloginComponent } from './teacherlogin/teacherlogin.component';
 import { FireprotectioncoursesComponent} from './fireprotectioncourses/fireprotectioncourses.component';
 import { AddCourseComponent} from './add-course/add-course.component';
+import {ClassDashComponent} from './class-dash/class-dash.component'
 const routes: Routes = [
   {
     path: '',
@@ -41,6 +42,10 @@ redirectTo: '/login'  },
   {
     path: 'addcourse',
     component: AddCourseComponent
+  },
+  {
+  path: 'class',
+  component: ClassDashComponent
   }
 ];
 

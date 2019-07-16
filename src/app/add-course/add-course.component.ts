@@ -10,6 +10,9 @@ import { Router } from '@angular/router';
 })
 export class AddCourseComponent implements OnInit, AfterViewInit {
 
+  minDate = new Date();
+  maxDate = new Date(2020, 0, 1);
+
   addCourseForm: FormGroup;
 
   constructor(private router: Router, private fb: FormBuilder,  private el: ElementRef) { }
