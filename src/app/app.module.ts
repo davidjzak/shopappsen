@@ -25,7 +25,7 @@ import { FireprotectioncoursesComponent } from './fireprotectioncourses/fireprot
 import { AddCourseComponent } from './add-course/add-course.component';
 import {  MatDatepickerModule, MatNativeDateModule } from '@angular/material';
 import { ClassDashComponent } from './class-dash/class-dash.component';
-
+import {MatExpansionModule} from '@angular/material/expansion';
 @NgModule({
   declarations: [
     AppComponent,
@@ -59,7 +59,8 @@ import { ClassDashComponent } from './class-dash/class-dash.component';
    MatDialogModule,
    
   MatDatepickerModule, 
-  MatNativeDateModule
+  MatNativeDateModule,
+  MatExpansionModule
 
   ],
   entryComponents: [DeleteModalDialog],

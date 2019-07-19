@@ -150,3 +150,22 @@ display: inline-block;
 .sidecontainer{
     float: right;
 }
+
+//removes padding on mat expansion panel body on fire protection courses page
+.fireProtection .mat-expansion-panel-body {
+    padding: 0px ;
+    border-top: none;
+}
+
+.fireProtection .mat-expansion-panel-header {
+    color: #DA291C;
+    
+}
+
+.fireProtection .mat-expansion-panel {
+    margin-bottom: 20px;
+}
+
+.fireProtection .mat-expansion-panel:not([class*=mat-elevation-z]) {
+    box-shadow: 0 3px 4px 0 rgba(0,0,0,.12);
+}
